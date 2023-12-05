@@ -15,9 +15,6 @@ program hattizai_lottery.aleo {
     }
 
     finalize play() {
-        // Check that the lottery has not expired.
-        assert(block.height <= 1000u32);
-
         // Randomly select whether or not the ticket is a winner.
         assert(ChaCha::rand_bool());
 
